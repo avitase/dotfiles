@@ -1,0 +1,64 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+    colors = false
+    interval = 1
+}
+
+order += "disk /data"
+order += "disk /"
+order += "wireless wlp3s0"
+order += "ethernet eno1"
+order += "load"
+order += "volume master"
+order += "battery 0"
+order += "tztime local"
+
+disk "/data" {
+    prefix_type = "decimal"
+    format = "/data: %free free"
+}
+
+disk "/" {
+    prefix_type = "decimal"
+    format = "/: %free free"
+}
+
+ethernet eno1 {
+    format_up = "eno1: %ip"
+    format_down = "eno1: down"
+}
+
+wireless wlp3s0 {
+    format_up = "wlp3s0: %ip (%essid)"
+    format_down = "wlp3s0: down"
+}
+
+load {
+  format = "load: %1min, %5min, %15min"
+}
+
+volume master {
+    format = "sound: %volume"
+    format_muted = "sound: muted"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+battery 0 {
+    format = "battery: %status %percentage"
+    path = "/sys/class/power_supply/BAT%d/uevent"
+    last_full_capacity = true
+    integer_battery_capacity = true
+}
+
+tztime local {
+    format = "%a %d.%m.%Y %H:%M"
+}
