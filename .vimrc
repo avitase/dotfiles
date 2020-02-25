@@ -1,4 +1,4 @@
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Searching
 set ignorecase " case insensitive searching
@@ -22,6 +22,9 @@ set expandtab " insert spaces rather than tabs for <Tab>
 set tabstop=4 " visible width of tabs
 set shiftwidth=4 " number of spaces to use for (un)indent 
 set softtabstop=4 " edit as if the tabs are 4 characters
+
+" Disable noexpandtab for Makefiles (genuine Tabs are required)
+autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=0
 
 syntax on
 
