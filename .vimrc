@@ -42,3 +42,5 @@ function SetTextOptions()
     set formatoptions-=tc " stop wraping (see :help fo-table for more information)
     set spell
 endfunction
+
+autocmd FileType gitcommit setlocal spell
