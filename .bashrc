@@ -1,7 +1,7 @@
 if [ -n "$SSH_CLIENT" ]; then
-    export PS1='[\h] \[\033]0;\u@\h:\w\007\]\[\033[01;31m\]\W>\[\033[00m\] '
+    export PS1='[\h] \[\033]0;\u@\h:\w\007\]\[\033[01;31m\]\W \$\[\033[00m\] '
 else
-    export PS1='\[\033]0;\u@\h:\w\007\]\[\033[01;31m\]\W>\[\033[00m\] '
+    export PS1='\[\033]0;\u@\h:\w\007\]\[\033[01;31m\]\W \$\[\033[00m\] '
 fi
 
 PROMPT_COMMAND+='pwd > $HOME/.currentdir'
