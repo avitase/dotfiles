@@ -19,6 +19,7 @@ export HISTFILESIZE=10000
 alias vmi='vim'
 alias vi='vim'
 alias imv='vim'
+alias ivm='vim'
 
 alias diff='colordiff'
 
