@@ -24,3 +24,5 @@ alias ivm='vim'
 alias diff='colordiff'
 
 alias ake='make'
+
+#setxkbmap -layout us -variant altgr-intl -option caps:escape,lv3:ralt_switch
