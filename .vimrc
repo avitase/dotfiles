@@ -28,8 +28,8 @@ autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=0
 
 syntax on
 
-autocmd FileType cpp highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-autocmd FileType cpp match OverLength /\%81v.\+/
+autocmd FileType cpp,python highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+autocmd FileType cpp,python match OverLength /\%81v.\+/
 
 autocmd FileType tex call SetTexOptions()
 function SetTexOptions()
@@ -44,3 +44,14 @@ function SetTextOptions()
 endfunction
 
 autocmd FileType gitcommit setlocal spell
+
+autocmd FileType python call SetPythonOptions()
+function SetPythonOptions()
+    set tabstop=4
+    set softtabstop=4
+    set shiftwidth=4
+    set expandtab
+    set autoindent
+    set fileformat=unix
+endfunction
+
