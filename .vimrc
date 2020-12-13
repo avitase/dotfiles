@@ -29,7 +29,7 @@ autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=0
 syntax on
 
 autocmd FileType cpp,python highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-autocmd FileType cpp,python match OverLength /\%81v.\+/
+autocmd FileType cpp,python match OverLength /\%101v.\+/
 
 autocmd FileType tex call SetTexOptions()
 function SetTexOptions()
