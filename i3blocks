@@ -1,0 +1,66 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=~/i3blocks-contrib/$BLOCK_NAME/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[volume]
+label=VOL 
+interval=once
+signal=10
+STEP=5%
+
+[memory]
+label=MEM 
+interval=5
+
+[memory]
+label=SWAP 
+instance=swap
+interval=5
+
+[disk]
+label=HOME (left) 
+interval=30
+
+[iface]
+label=enp8s0 
+iface=enp8s0
+interval=10
+
+[load_average]
+label=LOAD (1min) 
+interval=10
+
+[temperature]
+label=TEMP 
+interval=30
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+label=YYYY-MM-DD 
+interval=5
