@@ -56,11 +56,11 @@ interval=10
 label=LOAD (1min) 
 interval=10
 
-[temperature]
-label=TEMP 
-interval=30
+#[temperature]
+#label=TEMP 
+#interval=60
 
 [time]
-command=date '+%Y-%m-%d %H:%M:%S'
-label=YYYY-MM-DD 
+command=date
+label=
 interval=5
